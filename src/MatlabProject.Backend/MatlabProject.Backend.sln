@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatlabProject.Domain", "MatlabProject.Domain\MatlabProject.Domain.csproj", "{AC389D23-037B-47A3-89B3-790019C18F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatlabProject.Persistence", "MatlabProject.Persistence\MatlabProject.Persistence.csproj", "{7EA276B2-1742-4473-891C-6025D6EFCE2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatlabProject.Application", "MatlabProject.Application\MatlabProject.Application.csproj", "{140FCF68-0682-4A59-8BFC-4AD815308869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatlabProject.Infrastructure", "MatlabProject.Infrastructure\MatlabProject.Infrastructure.csproj", "{2072C5B2-D5EF-4DBD-BCC0-D5952440BD8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatlabProject.Api", "MatlabProject.Api\MatlabProject.Api.csproj", "{24C16AB7-69AB-4464-BA80-8F89981776A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC389D23-037B-47A3-89B3-790019C18F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC389D23-037B-47A3-89B3-790019C18F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC389D23-037B-47A3-89B3-790019C18F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC389D23-037B-47A3-89B3-790019C18F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA276B2-1742-4473-891C-6025D6EFCE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA276B2-1742-4473-891C-6025D6EFCE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA276B2-1742-4473-891C-6025D6EFCE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA276B2-1742-4473-891C-6025D6EFCE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{140FCF68-0682-4A59-8BFC-4AD815308869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{140FCF68-0682-4A59-8BFC-4AD815308869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{140FCF68-0682-4A59-8BFC-4AD815308869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{140FCF68-0682-4A59-8BFC-4AD815308869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2072C5B2-D5EF-4DBD-BCC0-D5952440BD8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2072C5B2-D5EF-4DBD-BCC0-D5952440BD8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2072C5B2-D5EF-4DBD-BCC0-D5952440BD8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2072C5B2-D5EF-4DBD-BCC0-D5952440BD8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24C16AB7-69AB-4464-BA80-8F89981776A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24C16AB7-69AB-4464-BA80-8F89981776A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24C16AB7-69AB-4464-BA80-8F89981776A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24C16AB7-69AB-4464-BA80-8F89981776A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
