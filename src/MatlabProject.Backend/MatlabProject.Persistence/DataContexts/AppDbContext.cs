@@ -1,7 +1,7 @@
 ﻿using MatlabProject.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CourseProject.Persistence.DataContexts;
+namespace MatlabProject.Persistence.DataContexts;
 public class AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : DbContext(dbContextOptions)
 {
     public DbSet<User> Users => Set<User>();
@@ -20,4 +20,4 @@ public class AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : DbC
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
-} 
+}
