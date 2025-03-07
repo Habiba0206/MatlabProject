@@ -2,7 +2,7 @@ using MatlabProject.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CourseProject.Persistence.EntityConfigurations;
+namespace MatlabProject.Persistence.EntityConfigurations;
 
 public class EmailHistoryConfiguration : IEntityTypeConfiguration<EmailHistory>
 {

@@ -3,7 +3,7 @@ using MatlabProject.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CourseProject.Persistence.EntityConfigurations;
+namespace MatlabProject.Persistence.EntityConfigurations;
 
 public class NotificationTemplateConfiguration : IEntityTypeConfiguration<NotificationTemplate>
 {
