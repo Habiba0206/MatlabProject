@@ -17,4 +17,5 @@ public class User : AuditableEntity
     public UserState UserState { get; set; }
     public UserSettings? UserSettings { get; set; }
     public IEnumerable<TestResult> TestResults { get; set; }
+    public IEnumerable<Certificate> Certificates { get; set; }
 }
