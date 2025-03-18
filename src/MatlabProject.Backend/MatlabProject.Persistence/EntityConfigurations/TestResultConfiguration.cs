@@ -8,10 +8,16 @@ public class TestResultConfiguration : IEntityTypeConfiguration<TestResult>
 {
     public void Configure(EntityTypeBuilder<TestResult> builder)
     {
+        builder.Property(tr => tr.StartTime)
+            .IsRequired();
+
+        builder.Property(tr => tr.EndTime)
+            .IsRequired();
+
         builder.Property(tr => tr.ScorePercentage)
             .IsRequired();
 
-        builder.Property(tr => tr.Passed)
+        builder.Property(tr => tr.IsPassed)
             .HasDefaultValue(false);
 
         builder.HasOne(tr => tr.User)

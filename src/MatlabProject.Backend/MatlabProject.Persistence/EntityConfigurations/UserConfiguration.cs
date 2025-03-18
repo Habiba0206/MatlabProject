@@ -29,12 +29,27 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder
             .Property(user => user.Role)
             .HasConversion<string>()
-            .HasDefaultValue(Role.User)
+            .HasDefaultValue(Role.Student)
             .HasMaxLength(64)
             .IsRequired();
 
         builder
             .HasIndex(user => user.EmailAddress)
             .IsUnique();
+
+        builder.HasMany(u => u.Tests)
+            .WithOne(t => t.User)
+            .HasForeignKey(t => t.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasMany(u => u.TestResults)
+            .WithOne(tr => tr.User)
+            .HasForeignKey(tr => tr.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasMany(u => u.Certificates)
+            .WithOne(c => c.User)
+            .HasForeignKey(c => c.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
