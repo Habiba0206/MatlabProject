@@ -17,7 +17,7 @@ public class AccountAggregatorService(
 {
     public async ValueTask<bool> CreateUserAsync(User user, CancellationToken cancellationToken = default)
     {
-        user.Role = Role.User;
+        user.Role = Role.Student;
         var createdUser = await userService.CreateAsync(user, cancellationToken: cancellationToken);
         await userSettingsService.CreateAsync(
             new UserSettings
