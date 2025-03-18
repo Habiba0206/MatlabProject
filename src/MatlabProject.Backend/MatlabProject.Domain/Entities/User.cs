@@ -1,5 +1,4 @@
-﻿using MassTransit.Configuration;
-using MatlabProject.Domain.Common.Entities;
+﻿using MatlabProject.Domain.Common.Entities;
 using MatlabProject.Domain.Enums;
 
 namespace MatlabProject.Domain.Entities;
@@ -16,6 +15,7 @@ public class User : AuditableEntity
     public Role Role { get; set; }
     public UserState UserState { get; set; }
     public UserSettings? UserSettings { get; set; }
+    public IEnumerable<Test> Tests { get; set; }
     public IEnumerable<TestResult> TestResults { get; set; }
     public IEnumerable<Certificate> Certificates { get; set; }
 }
