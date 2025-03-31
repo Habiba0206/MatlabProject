@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace MatlabProject.Persistence.Repositories;
 
-public class StudenAnswerRepository(AppDbContext appDbContext, ICacheBroker cacheBroker) :
+public class StudentAnswerRepository(AppDbContext appDbContext, ICacheBroker cacheBroker) :
     EntityRepositoryBase<StudentAnswer, AppDbContext>(appDbContext, cacheBroker),
     IStudentAnswerRepository
 

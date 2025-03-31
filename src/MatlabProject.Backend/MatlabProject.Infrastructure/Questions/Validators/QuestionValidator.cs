@@ -13,16 +13,16 @@ public class QuestionValidator : AbstractValidator<Question>
             () =>
             {
                 RuleFor(question => question.TestId).NotEqual(Guid.Empty);
-                RuleFor(question => question.Text).NotEmpty().MaximumLength(2);
-                RuleFor(question => question.CorrectAnswer).NotEmpty().MaximumLength(2);
+                RuleFor(question => question.Text).NotEmpty().MinimumLength(2);
+                RuleFor(question => question.CorrectAnswer).NotEmpty().MinimumLength(2);
             });
 
         RuleSet(
             EntityEvent.OnUpdate.ToString(),
             () =>
             {
-                RuleFor(question => question.Text).NotEmpty().MaximumLength(2);
-                RuleFor(question => question.CorrectAnswer).NotEmpty().MaximumLength(2);
+                RuleFor(question => question.Text).NotEmpty().MinimumLength(2);
+                RuleFor(question => question.CorrectAnswer).NotEmpty().MinimumLength(2);
             });
     }
 }

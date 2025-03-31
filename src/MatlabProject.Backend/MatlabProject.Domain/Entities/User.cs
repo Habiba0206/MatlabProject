@@ -10,7 +10,7 @@ public class User : AuditableEntity
     public string EmailAddress { get; set; } = default!;
     public string PasswordHash { get; set; } = default!;
     public int Age { get; set; }
-    public string StudentId { get; set; } = default!;
+    public string? StudentId { get; set; }
     public bool IsEmailAddressVerified { get; set; }
     public Role Role { get; set; }
     public UserState UserState { get; set; }

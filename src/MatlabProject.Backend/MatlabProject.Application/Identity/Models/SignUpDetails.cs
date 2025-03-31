@@ -8,6 +8,8 @@ public class SignUpDetails
 
     public string EmailAddress { get; set; } = default!;
 
+    public string? StudentId { get; set; }
+
     public int Age { get; set; }
 
     public string? Password { get; set; }
