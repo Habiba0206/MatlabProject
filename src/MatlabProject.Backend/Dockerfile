@@ -1,12 +1,12 @@
 # Use the ASP.NET base image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 USER app
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
 # Use the .NET SDK image for the build stage
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src/MatlabProject.Backend 
 
@@ -15,6 +15,7 @@ COPY ["MatlabProject.Api/MatlabProject.Api.csproj", "MatlabProject.Api/"]
 COPY ["MatlabProject.Application/MatlabProject.Application.csproj", "MatlabProject.Application/"]
 COPY ["MatlabProject.Domain/MatlabProject.Domain.csproj", "MatlabProject.Domain/"]
 COPY ["MatlabProject.Persistence/MatlabProject.Persistence.csproj", "MatlabProject.Persistence/"]
+COPY ["MatlabProject.Infrastructure/MatlabProject.Infrastructure.csproj", "MatlabProject.Infrastructure/"]
 
 # Restore the dependencies
 RUN dotnet restore "MatlabProject.Api/MatlabProject.Api.csproj"
