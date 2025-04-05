@@ -8,23 +8,22 @@ EXPOSE 8081
 # Use the .NET SDK image for the build stage
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
-WORKDIR /src/MatlabProject.Backend 
+WORKDIR /src
 
-# Copy project files
-COPY ["MatlabProject.Api/MatlabProject.Api.csproj", "MatlabProject.Api/"]
-COPY ["MatlabProject.Application/MatlabProject.Application.csproj", "MatlabProject.Application/"]
-COPY ["MatlabProject.Domain/MatlabProject.Domain.csproj", "MatlabProject.Domain/"]
-COPY ["MatlabProject.Persistence/MatlabProject.Persistence.csproj", "MatlabProject.Persistence/"]
-COPY ["MatlabProject.Infrastructure/MatlabProject.Infrastructure.csproj", "MatlabProject.Infrastructure/"]
+# Copy project files (with full path)
+COPY ["src/MatlabProject.Backend/MatlabProject.Api/MatlabProject.Api.csproj", "MatlabProject.Api/"]
+COPY ["src/MatlabProject.Backend/MatlabProject.Application/MatlabProject.Application.csproj", "MatlabProject.Application/"]
+COPY ["src/MatlabProject.Backend/MatlabProject.Domain/MatlabProject.Domain.csproj", "MatlabProject.Domain/"]
+COPY ["src/MatlabProject.Backend/MatlabProject.Persistence/MatlabProject.Persistence.csproj", "MatlabProject.Persistence/"]
+COPY ["src/MatlabProject.Backend/MatlabProject.Infrastructure/MatlabProject.Infrastructure.csproj", "MatlabProject.Infrastructure/"]
 
 # Restore the dependencies
 RUN dotnet restore "MatlabProject.Api/MatlabProject.Api.csproj"
 
-# Copy the rest of the application files
-COPY . .
+# Copy the rest of the source code
+COPY src/MatlabProject.Backend .
 
 # Build the application
-# Stay in the Backend directory
 RUN dotnet build "MatlabProject.Api/MatlabProject.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Publish the application
